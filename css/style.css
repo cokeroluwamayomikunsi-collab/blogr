@@ -1,0 +1,345 @@
+@font-face {
+    font-family: Overpass;
+    src: url("../fonts/Overpass-Regular.ttf");
+}
+
+@font-face {
+    font-family: Ubuntu;
+    src: url("../fonts/Ubuntu-Regular.ttf");
+}
+
+:root {
+    /* font family */
+    --header-font: Overpass;
+    --paragraph-font: Ubuntu;
+
+    /* colors */
+    --red500: hsl(356, 100%, 66%);
+    --red400: hsl(355, 100%, 74%);
+    --blue900: hsl(208, 49%, 24%);
+    --white: hsl(0, 100%, 100%);
+    --gray400: rgba(75, 88, 98, .3);
+    --gray600: hsl(207, 13%, 34%);
+    --gray900: hsl(240, 10%, 16%);
+    --orange300: hsl(13, 100%, 72%);
+    --red550: hsl(353, 100%, 62%);
+    --purple950: hsl(237, 17%, 21%);
+    --purple900: hsl(237, 23%, 31%);
+
+    /* rounded corners */
+    --round50: 6px;
+    --round300: 3rem;
+    --round500: 6.5rem;
+}
+
+* {
+    color: var(--gray600);
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: var(--paragraph-font);
+    text-decoration: none;
+    list-style: none;
+    transition: all .2s;
+}
+
+.button {
+    background-color: var(--white);
+    color: var(--red500);
+    padding: 13px 2.26rem;
+    font-size: 16px;
+    font-weight: 700;
+    /* height: 3.2rem; */
+    display: inline-block;
+    border-radius: var(--round300);
+}
+
+.button:hover {
+    background-color: var(--red400);
+    color: var(--white);
+}
+
+
+
+header {
+    background: url("../images/bg-pattern-intro-desktop.svg"), linear-gradient(150deg, var(--orange300) 0%, var(--red550) 100%);
+    background-repeat: no-repeat;
+    background-size: 159rem, 100%;
+    background-position: -4rem -65rem, center;
+    padding: 4rem 8% 0;
+    height: 37rem;      width: 100%;
+    border-radius: 0 0 0 var(--round500);
+}
+
+header * {
+    color: var(--white);
+}
+
+nav {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+div.navs {
+    margin: 0 0 0 -27rem;
+}
+
+div.navs input[type="checkbox"] {
+    display: none;
+}
+
+div.navs {
+    display: flex;
+    gap: 2rem;
+    position: relative;
+}
+
+
+
+div.navs label span {
+    color: var(--white);
+    font-size: 16px;
+    font-weight: 700;
+}
+
+div.navs label img {
+    margin: 0 0 0 10px;
+    width: 12px;
+    transition: transform .2s;
+}
+
+div.navs label:hover {
+    cursor: pointer;
+    text-decoration: 1.5px underline var(--white);
+}
+
+div.navs input[type="checkbox"]:checked ~ ul.options {
+    display: block;
+}
+
+div.navs input[type="checkbox"]:checked ~ div.label label img {
+    transform: rotate(-180deg);
+}
+
+div.navs ul.options {
+    background-color: var(--white);
+    padding: 1.5rem 1.5rem;
+    margin: 0 0 0 -2.5rem;
+    width: 11rem;
+    border-radius: var(--round50);
+    box-shadow: 2px 2px 16px var(--gray400);
+    display: none;
+    position: absolute;
+    top: 2.5rem;
+}
+
+div.navs ul.options li {
+    margin: 12px 0 0;
+    font-size: 16px;
+    list-style: none;
+}
+
+div.navs ul.options li a {
+    color: var(--gray600);
+}
+
+div.navs ul.options li:nth-of-type(1) {
+    margin: 0;
+}
+
+div.navs ul.options li a:hover {
+    font-weight: 700;
+}
+
+div.auth ul {
+    display: flex;
+    align-items: center;
+    gap: 2rem;
+}
+
+div.auth ul li:nth-of-type(1) a {
+    color: var(--white);
+    font-size: 16px;
+    font-weight: 700;
+}
+
+div.auth ul li:nth-of-type(1) a:hover {
+    text-decoration: 1.5px underline var(--white);
+}
+
+
+div.hero h1 {
+    margin: 6.5rem 0 0;
+    font-size: 4rem;
+    font-weight: 600;
+    font-family: var(--header-font);
+    text-align: center;
+}
+
+div.hero span {
+    margin: 1.6rem 0 0;
+    font-size: 1.3rem;
+    text-align: center;
+    display: block;
+    opacity: .8;
+}
+
+div.hero div.cta ul {
+    margin: 4.6rem 0 0;
+    display: flex;
+    justify-content: center;
+    gap: 1rem;
+}
+
+div.hero .button {
+    padding: 13px 0;
+    width: 8rem;
+    text-align: center;
+}
+
+
+div.hero div.cta li:nth-of-type(2) a.button {
+    background-color: transparent;
+    color: var(--white);
+    border: solid 1px var(--white);
+}
+
+div.hero div.cta li:nth-of-type(2) a.button:hover {
+    background-color: var(--white);
+    color: var(--red500);
+}
+
+section.dftf div.body1{
+    background: url(../images/illustration-editor-desktop.svg);
+    background-repeat: no-repeat;
+    background-position: 45.5rem 5rem; 
+    width: 100%; height: 62rem;
+    display: block;
+}
+
+section.dftf div.body1{
+    padding: 5rem 50rem 4rem 9rem;
+}
+
+section.dftf div.body1 h1{
+    padding: 0 0 0 4rem;
+    width: 48rem;
+      margin: 6rem 0 4rem 3rem ; 
+    font-size: 2.4rem;
+    color: var(--blue900);
+    text-align: center;
+}
+
+section.dftf  h2{
+    margin: 2rem 0 1.6rem 0;
+    font-size: 1.5rem;
+    color: var(--blue900);
+}
+
+section.dftf  span{ 
+     font-size: 15px;
+     font-weight: 300;
+     line-height: 1.5rem;
+    font-family: var(--paragraph-font);
+    color: var(--gray600);
+    text-align: justify;
+}
+
+section.dftf div.body2{
+   padding:  15rem 9rem 4rem 50rem;  
+}
+
+section.dftf div.body2{
+    background: url(../images/illustration-laptop-desktop.svg);
+    background-repeat: no-repeat;
+    background-position: -17rem 5rem; 
+    width: 100%; height: 62rem;
+    display: block;
+}
+
+
+section.stateofart{ 
+    width: 100%; height: 26rem;
+    border-radius: 0 6rem 0 6rem;
+    background-color: var(--purple950);
+    background-image: url(../images/bg-pattern-circles.svg);
+    background-repeat: no-repeat;
+    background-position: -12rem -35rem;
+    background-size: 65rem;
+    position: relative;
+    display: block;
+}
+
+section.stateofart img{
+    position: absolute;
+    width: 35rem;
+    left: 5rem;
+    top: -4rem;
+    z-index: 2;
+}
+
+section.stateofart span{
+    position: absolute;
+    color: white;
+    font-family:var(--header-font) ;
+    z-index: 3;
+}
+
+section.stateofart h3{
+     position: absolute;
+    color: white;
+    font-family:var(--header-font) ;
+    z-index: 3;
+    right: 14rem;
+    top: 1rem;
+    font-size: 2rem;
+    padding: 5rem 0 0;
+}
+
+section.stateofart span{
+    right: 6rem;
+    top: 9rem;
+    width: 35rem;
+    margin-top: 1.79rem;
+    line-height: 1.5rem;
+    font-size: 15px;
+    font-weight: 300;
+}
+
+footer{
+    background-color: var(--gray900);
+    background-image: url(../images/logo.svg);
+    background-repeat: no-repeat;
+    background-position: 8rem 5rem;
+    color: var(--white);
+    width: 100%;  height: 24rem;
+    border-radius: 0 var(--round500) 0 0;
+     padding: 0 12rem 4rem 20rem;
+     display: flex;
+     justify-content: space-between;
+}
+
+
+
+footer div span{
+    padding: 6rem 0 1rem 0;
+    color: var(--white) ;
+    font-size: 1rem ;
+    line-height: 1rem;
+    display: block;
+}
+
+footer div ul li:hover{
+    color: white;
+}
+
+footer div ul li:hover{
+    cursor: pointer;
+    color: var(--white);
+    
+}
+
+
+
+
