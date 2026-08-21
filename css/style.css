@@ -67,7 +67,7 @@ header {
     background-size: 159rem, 100%;
     background-position: -4rem -65rem, center;
     padding: 4rem 8% 0;
-    height: 37rem;      width: 100%;
+    height: 32.5rem;      width: 100%;
     border-radius: 0 0 0 var(--round500);
 }
 
@@ -81,9 +81,13 @@ nav {
     justify-content: space-between;
 }
 
-div.navs {
-    margin: 0 0 0 -27rem;
+nav div.container {
+    display: flex;
+    align-items: center;
+    gap: 4rem;
 }
+
+
 
 div.navs input[type="checkbox"] {
     display: none;
@@ -170,8 +174,8 @@ div.auth ul li:nth-of-type(1) a:hover {
 
 
 div.hero h1 {
-    margin: 6.5rem 0 0;
-    font-size: 4rem;
+    margin: 4.5rem 0 0;
+    font-size: 3.65rem;
     font-weight: 600;
     font-family: var(--header-font);
     text-align: center;
